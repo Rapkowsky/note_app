@@ -7,16 +7,18 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap&subset=latin-ext" rel="stylesheet" />
 
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 		<script src="https://kit.fontawesome.com/327a0d490c.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
 		<div class="menu">
-			<h1><i class="fas fa-sticky-note"></i> MyNotes</h1>
+			<h1><ion-icon name="book"></ion-icon> MyNotes</h1>
 			<div class="menu-buttons">
-				<button class="add icon"><i class="fas fa-plus"></i> Dodaj</button>
-				<button class="delete-all icon"><i class="fas fa-trash-alt"></i> Usuń wszystkie</button>
+				<button class="add icon"><ion-icon name="add"></ion-icon> Dodaj</button>
+				<button class="delete-all icon"><ion-icon name="trash"></ion-icon> Usuń wszystkie</button>
 			</div>
 		</div>
 
@@ -25,22 +27,13 @@
 				<div class="note-header">
 					<h3 class="note-title">Notatka #1</h3>
 					<button class="delete-note">
-						<i class="fas fa-times icon"></i>
+						<ion-icon name="close"></ion-icon>
 					</button>
 				</div>
 				<div class="note-body">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolores consectetur sapiente optio nobis obcaecati quisquam. Ullam, aut. Minus iste iure recusandae saepe officiis voluptas,
 					molestiae accusantium at ipsa consequuntur!
 				</div>
-			</div>
-			<div class="note">
-				<div class="note-header">
-					<h3 class="note-title">Notatka #2</h3>
-					<button class="delete-note">
-						<i class="fas fa-times icon"></i>
-					</button>
-				</div>
-				<div class="note-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 			</div>
 		</div>
 
@@ -60,11 +53,11 @@
 			<p class="error">Uzupełnij wszystkie pola!</p>
 
 			<div class="panel-buttons">
-				<button class="save icon"><i class="fas fa-save"></i> Zapisz</button>
-				<button class="cancel icon"><i class="far fa-window-close"></i> Anuluj</button>
+				<button class="save icon"><ion-icon name="bookmark"></ion-icon> Zapisz</button>
+				<button class="cancel icon"><ion-icon name="close"></ion-icon> Anuluj</button>
 			</div>
 		</div>
 
-		<script src="main.js"></script>
+		<script src="/js/main.js"></script>
 	</body>
 </html>
