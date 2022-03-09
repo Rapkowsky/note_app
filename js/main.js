@@ -7,7 +7,7 @@ const deleteAllBtn = document.querySelector(".delete-all");
 const noteArea = document.querySelector(".note-area");
 const notePanel = document.querySelector(".note-panel");
 const category = document.querySelector("#category");
-const textarea = document.querySelector("#text");
+const textArea = document.querySelector("#text");
 const error = document.querySelector(".error");
 
 let selectedValue;
@@ -21,9 +21,18 @@ const openPanel = () => {
 const closePanel = () => {
 	notePanel.style.display = "none";
 	error.style.visibility = "hidden";
-	textarea.value = "";
+	textArea.value = "";
 	category.selectedIndex = 0;
+};
+
+const addNote = () => {
+	if (textArea.value !== "") {
+		error.style.visibility = "hidden";
+	} else {
+		error.style.visibility = "visible";
+	}
 };
 
 addBtn.addEventListener("click", openPanel);
 cancelBtn.addEventListener("click", closePanel);
+saveBtn.addEventListener("click", addNote);
