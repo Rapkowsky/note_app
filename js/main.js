@@ -41,7 +41,7 @@ const createNote = () => {
 
 	newNote.innerHTML = `<div class="note-header">
 	<h3 class="note-title">${selectedValue}</h3>
-	<button class="delete-note">
+	<button class="delete-note" onclick="deleteNote(${cardID})">
 		<ion-icon name="close"></ion-icon>
 	</button>
 	</div>
@@ -75,6 +75,15 @@ const checkColor = (note) => {
 	}
 };
 
+const deleteNote = (id) => {
+	const noteToDelete = document.getElementById(id);
+	noteArea.removeChild(noteToDelete);
+};
+const deleteAllNotes = () => {
+	noteArea.textContent = "";
+};
+
 addBtn.addEventListener("click", openPanel);
 cancelBtn.addEventListener("click", closePanel);
 saveBtn.addEventListener("click", addNote);
+deleteAllBtn.addEventListener("click", deleteAllNotes);
